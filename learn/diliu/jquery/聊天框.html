@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .talk{
+            width: 640px;
+            height: 540px;
+            margin: 45px auto;
+            border: 1px black solid;
+        }
+        .show{
+            width: 600px;
+            height: 450px;
+            margin: 0 auto;
+            background: lightgrey;
+        }
+        .input{
+            width:600px ;
+            height:80px;
+            background: lightgrey;
+            margin: 10px auto 10px;
+        }
+        .input_data{
+            height: 45px;
+            width: 450px;
+            border: 1px black solid;
+            margin: 15px 10px;
+        }
+        .btn{
+            height: 45px;
+            width: 75px;
+            border: 1px black solid;
+            margin: 15px 10px;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('#send').click(function () {
+                 var dataShowHtml=$('#data').html();
+                var d = $('#d').val();
+                str = '<div class="r"><span>'+d+'</span></div>';
+                $('.show').html(dataShowHtml+str);
+                $('#d').val('')
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="talk">
+    <div class="show" id="data">
+    <div class="l"><span>小明</span></div>
+    <div class="r"><span>小红</span></div>
+</div>
+<div class="input">
+    <input class="input_data" type="text" id="d">
+    <input class="btn" type="button" value="发送" id="send">
+</div>
+</div>
+
+</body>
+</html>

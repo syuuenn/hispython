@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box1{
+            width: 360px;
+            height: 45px;
+            background: #E0FFFF;
+            text-align: center;
+            line-height: 45px;
+
+        }
+         a{
+            text-decoration: none;
+        }
+        a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    color: orangered;
+}
+a:active {
+    color: orangered;
+}
+        .gang{
+            height: 2px;
+            width: 45px;
+            background: red;
+          margin: -10px  15px 5px 15px ;
+            display: none;
+        }
+        .bbox{
+            height: 45px;
+        }
+        .box1 ul li{
+            width: 72px;
+            float: left;
+        }
+          .box21{
+             width: 360px;
+            height: 90px;
+            display: none;
+        }
+          .box22{
+              position: relative;
+              left:-75px;
+             width: 360px;
+            height: 90px;
+              display: none;
+        }
+          .box23{
+             position: relative;
+              left:-150px;
+             width: 360px;
+            height: 90px;
+              display: none;
+        }
+            .box24{
+              position: relative;
+              left:-215px;
+             width: 360px;
+            height: 90px;
+              display: none;
+        }
+           .box25{
+             position: relative;
+              left:-300px;
+             width: 360px;
+            height: 90px;
+              display: none;
+        }
+
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('ul li').hover(function () {
+                $(this).children('div').toggle()
+            })
+
+        })
+    </script>
+</head>
+<body>
+<div class="box1">
+    <ul>
+        <li><a href="#">公告</a>
+            <div class="gang"></div>
+             <div class="box21">
+            <div class="bbox">中国产业</div>
+            <div class="bbox">天猫618商家</div>
+        </div>
+        </li>
+        <li><a href="#">规则</a>
+         <div class="gang"></div>
+
+        <div class="box22">
+            <div class="bbox">
+                <span>1111111111111111</span>
+                <span>2222222222222222</span>
+            </div>
+             <div class="bbox">
+                <span>3333333333333333</span>
+                <span>4444444444444444</span>
+            </div>
+        </div ></li>
+        <li><a href="#">论坛</a>
+         <div class="gang"></div>
+         <div class="box23">
+             <div>
+                <span>11111111111111</span>
+                <span>222222222222222</span>
+            </div>
+             <div>
+                <span>333333333333333</span>
+                <span>4444444444444444</span>
+            </div>
+        </div></li>
+        <li><a href="#">安全</a>
+         <div class="gang"></div>
+           <div class="box24">
+             <div>
+                <span>111111111111111</span>
+                <span>222222222222222</span>
+            </div>
+             <div>
+                <span>33333333333333</span>
+                <span>444444444444444</span>
+            </div>
+        </div></li>
+        <li><a href="#">公益</a>
+            <div class="gang"></div>
+        <div class="box25">
+             <div>
+                <span>11111111111111</span>
+                <span>22222222222222</span>
+            </div>
+             <div>
+                <span>333333333333333</span>
+                <span>4444444444444444</span>
+            </div>
+        </div></li>
+    </ul>
+
+
+
+
+
+    </div>
+</div>
+</body>
+</html>

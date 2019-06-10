@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+           .box1{
+            width: 360px;
+            height: 300px;
+            background: #E0FFFF;
+            text-align: center;
+            line-height: 100px;
+
+        }
+      .box1 ul li{
+        width: 90px;
+        float: left;
+          }
+       a{
+        text-decoration: none;
+    }
+        a:link{
+        color: black;
+        }
+        a:visited{
+        color: black;
+        }
+        a:hover{
+        color: orangered;
+        }
+        a:active {
+        color: orangered;
+        }
+        .box2{
+            position: relative;
+            top: -100px;
+            width: 360px;
+            height: 300px;
+            display: none;
+        }
+          .box31{
+            width: 90px;
+            height: 100px;
+            background: white;
+            border-top: 1px orangered solid;
+            border-left: 1px orangered solid;
+            border-right: 1px orangered solid;
+            border-bottom: 1px white solid;
+            position: absolute;
+            top:0;
+
+        }
+         .box22{
+            width: 360px;
+            height: 200px;
+            border: 1px orangered solid;
+               /*background: white;*/
+           position: absolute;
+           top:100px;
+        }
+         .box21{
+            width: 90px;
+            height: 100px;
+            background: white;
+            border-top: 1px orangered solid;
+            border-left: 1px orangered solid;
+            border-right: 1px orangered solid;
+            border-bottom: 1px white solid;
+            position: absolute;
+            top:0;
+
+        }
+         .box32{
+            width: 360px;
+            height: 200px;
+            border: 1px orangered solid;
+               background: white;
+           position: absolute;
+           top:100px;
+            left:-90px;
+        }
+          .box41{
+            width: 90px;
+            height: 100px;
+            background: white;
+            border-top: 1px orangered solid;
+            border-left: 1px orangered solid;
+            border-right: 1px orangered solid;
+            border-bottom: 1px white solid;
+            position: absolute;
+            top:0;
+
+        }
+         .box42{
+            width: 360px;
+            height: 200px;
+            border: 1px orangered solid;
+               background: white;
+           position: absolute;
+           top:100px;
+            left:-180px;
+        }
+          .box51{
+            width: 90px;
+            height: 100px;
+            background: white;
+            border-top: 1px orangered solid;
+            border-left: 1px orangered solid;
+            border-right: 1px orangered solid;
+            border-bottom: 1px white solid;
+            position: absolute;
+            top:0;
+
+        }
+         .box52{
+            width: 360px;
+            height: 200px;
+            border: 1px orangered solid;
+               background: white;
+           position: absolute;
+           top:100px;
+            left:-270px;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('.box1 ul li').hover(function () {
+                $(this).children('div').toggle()
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="box1">
+<ul>
+    <li><a href="#">充话费</a>
+    <div class="box2">
+        <div class="box22"></div>
+        <div class="box21"><a href="#">充话费</a></div>
+    </div>
+    </li>
+    <li><a href="#">旅行</a>
+     <div class="box2">
+        <div class="box32"></div>
+        <div class="box31"><a href="#">旅行</a></div>
+    </div>
+    </li>
+    <li><a href="#">车险</a>
+     <div class="box2">
+        <div class="box42"></div>
+        <div class="box41"><a href="#">车险</a></div>
+    </div>
+    </li>
+    <li><a href="#">游戏</a>
+     <div class="box2">
+        <div class="box52"></div>
+        <div class="box51"><a href="#">游戏</a></div>
+    </div>
+    </li>
+    <li><a href="#">彩票</a></li>
+    <li><a href="#">电影</a></li>
+    <li><a href="#">酒店</a></li>
+    <li><a href="#">理财</a></li>
+    <li><a href="#">找服务</a></li>
+    <li><a href="#">演出</a></li>
+    <li><a href="#">水电煤</a></li>
+    <li><a href="#">火车票</a></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var tx1 =document.getElementById('tx1');
+            var tx2 =document.getElementById('tx2');
+            var bt =document.getElementById('bt');
+            var box1 =document.getElementById('box1');
+            // alert(box1);
+
+            bt.onclick = function () {
+                username = tx1.value;
+                pwd = tx2.value;
+                jsonobject={
+                    'nameval':username,
+                    'pwdval':pwd
+                };
+                var str = '';
+                for(i in jsonobject){
+                    str+='<li>'+jsonobject[i]+'</li>';
+
+                }
+                  alert(str);
+                 alert(typeof (str));
+                  box1.innerHTML=str;
+                    // sendData=JSON.stringify(jsonobject);
+                    // recvData=JSON.parse(接受数据)
+                }
+            }
+            // JSON.stringify()转换字符串
+            // JSON.parse()//字符串转换json
+
+    </script>
+</head>
+<body>
+<
+    用户名：<input type="text" id="tx1"><br>
+    密码：<input type="password" id="tx2"><br>
+    <button id="bt">提交</button>
+
+<ul id="box1">
+    <li></li>
+</ul>
+</body>
+</html>

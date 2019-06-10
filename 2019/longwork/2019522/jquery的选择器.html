@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <script src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('span');//通过标签选择
+            $('.box1');//通过类名选择
+            $('#box2');//通过ID名选择
+            $('ul li:first');//层级选择第一个ul里的第一个li
+            $('ul li:first-child');//层级选择所有ul里的第一个li
+            $('input[name="btn"]')//属性选择器
+        })
+    </script>
+</head>
+<body>
+<span>hello world!</span>
+<div class="box1"></div>
+<div id="box2"></div>
+<ul>
+    <li></li>
+    <li></li>
+</ul>
+<ul>
+    <li></li>
+    <li></li>
+</ul>
+<input type="button" name="btn">
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var stime = null;
+            var one = document.getElementById('one');
+            var two = document.getElementById('two');
+            var three = document.getElementById('three');
+            one.onclick = function(){
+                setTimeout(function () {
+                    alert('hello')},3000)
+            };
+
+            two.onclick = function(){
+                  function ft() { alert('你好')}
+                stime = setInterval(ft,4000)
+                };
+
+             three.onclick = function () {
+                 clearInterval(stime);
+                stime = null
+             }
+        }
+    </script>
+</head>
+<body>
+<button id="one">单次</button>
+<button id="two">多次</button>
+<button id="three">清除</button>
+</body>
+</html>

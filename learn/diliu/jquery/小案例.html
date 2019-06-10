@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul li{
+            list-style: none;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+      $(function () {
+          $('li').click(function () {
+              // $(this).css({'background':'green'});
+              // $(this).siblings().css({'background':''});
+              $(this).css({'color':'green'}).prev().css({'color':'green'});//同级中指定的前一个
+              $(this).prev().prev().css({'color':'green'});
+              $(this).prev().prev().prev().css({'color':'green'});
+          })
+      })
+    </script>
+</head>
+<body>
+<ul>
+    <li>测试</li>
+    <li>测试</li>
+    <li>测试</li>
+    <li>测试</li>
+    <li>测试</li>
+    <li>测试</li>
+    <li>测试</li>
+    <li>测试</li>
+</ul>
+</body>
+</html>

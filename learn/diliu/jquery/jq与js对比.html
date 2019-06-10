@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box1{
+            width: 500px;
+            height: 500px;
+            background: black;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        // window.onload = function () {
+        //     var box1 = document.getElementById('box1');
+        //     var bt = document.getElementById('bt');
+        //     bt.onclick = function () {
+        //         box1.style.display='none'
+        //     }
+        // }
+        $(function () {
+            $('#bt').click(function () {
+                // $('#box1').hide(500)
+                // $('#box1').show(500)
+                $('#box1').toggle(500)
+
+            })
+        })
+
+    </script>
+</head>
+<body>
+<div id="box1">
+</div>
+<button id="bt">按钮</button>
+</body>
+</html>

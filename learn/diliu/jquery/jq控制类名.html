@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .new1{
+            width: 300px;
+            height: 300px;
+            background: #FF7F24;
+        }
+        .new2{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //去除类名
+            // $('#box1').removeClass('new1');
+            //追加new2样式
+            // $('#box1').addClass('new2');
+            //移除多个样式
+            //$('#box1').removeClass('new1 new2');
+            //
+            $('box1').toggleClass('new2')
+        })
+    </script>
+</head>
+<body>
+<div class="new1" id="box1"></div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            background: #FF7F24;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('button').click(function () {
+                $('div').animate({'font-size':'200px','width':'500px','height':'500px','opacity':'o.5','margin-left':'20px'},'linear',function () {alert('ok')
+
+                })
+
+                })//设置某个元素的属性值，一个或多个，(颜色不生效)执行完会有回调函数
+            })
+
+    </script>
+</head>
+<body>
+<button>按钮</button>
+<div>mmp</div>
+</body>
+</html>

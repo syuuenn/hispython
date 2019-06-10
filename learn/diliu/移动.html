@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #box1{
+            background: black;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 3px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var num = 0;
+            var direction=true;
+            var box1 = document.getElementById('box1');
+            function f(){
+                if(num>=1200){
+                    direction=false
+                }
+                else if(num<=30){
+                    direction=true
+                }
+                if(direction){
+                    num+=30
+                }
+                if(direction==false){
+                    num-=30
+                }
+
+                box1.style.left =num +'px';
+            }
+            setInterval(f,50)
+
+        }
+
+    </script>
+</head>
+<body>
+<div id="box1"></div>
+</body>
+</html>

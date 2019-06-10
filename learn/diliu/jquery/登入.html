@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var num = $('.input1');
+            var s = null;
+            var ret =/^1[3,4,5,7,8,][0-9]{9}$/;
+            $('.login').click(function () {
+                $('.login_window').show(350)
+            });
+              $('#image1').click(function () {
+                $('.login_window').hide(350)
+            });
+             $('#btn').click(function () {
+               s= num.val();
+               if(ret.test(s)){
+               }
+               else {
+                   $('#warning').show(350)
+               }
+            })
+        })
+    </script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .top{
+            width: 100%;
+            height: 340.5px;
+            background: url("//cli-sta.guazistatic.com/c2c_web/Mask.60ff70b8a3ffb3b37457aa2c80e6165b.png") no-repeat;
+        }
+        .header{
+            width: 100%;
+            height: 55px;
+        }
+        .login{
+            width: 52px;
+            height: 27px;
+            float: right;
+            color: white;
+        }
+
+        .login_window{
+            width: 800px;
+            height: 430px;
+            background-color: white;
+            position: fixed;
+            top: 200px;
+            left: 30%;
+            overflow: hidden;
+            border-radius: 15px;
+            display: none;
+        }
+        #image1{
+            float: right;
+        }
+        .window_top{
+            width: 789px;
+            height: 73.6px;
+            text-align: center;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        .window_middle{
+            width: 789px;
+            height: 108px;
+            text-align: center;
+        }
+        .window_middle p{
+            display: inline-block;
+            width: 107px;
+            height: 41.6px;
+            font-size: 20px;
+        }
+        .input1{
+            width: 390px;
+            height: 30px;
+            font-size: 16px;
+        }
+        #warning{
+            display: none;
+            color: red;
+        }
+        .input2{
+            width: 232px;
+            height: 30px;
+            font-size: 16px;
+        }
+        .input3{
+            width: 150px;
+            height: 42px;
+            background-color: #22ac38;
+            border: 0 none;
+            font-size: 16px;
+            color: white;
+            margin-left: 5px;
+        }
+        button{
+            width: 410px;
+            height: 50px;
+            border: 0 none;
+            color: white;
+            background-color: #22ac38;
+            display: block;
+            margin: 30px auto;
+            font-size: 30px;
+        }
+        .window_bottom{
+            height: 30px;
+            line-height: 30px;
+            font-size: 30px;
+            text-align: center;
+            color: #22ac38;
+            margin-top: 20px ;
+        }
+        .window_bottom_two{
+            text-align: center;
+            font-size: 16px;
+            line-height: 16px;
+            margin-top: 8px;
+        }
+        .window_bottom_two a{
+            text-decoration: none;
+            color: #22ac38;
+        }
+    </style>
+
+
+
+</head>
+<body style="background-color: gray">
+
+<div class="top">
+    <div class="header">
+        <div class="login">登录</div>
+    </div>
+</div>
+
+
+<div class="login_window">
+    <img id="image1" src="https://cli-sta.guazistatic.com/c2c_wap/close.88d847743dabff466b1a30919dadcbb1.png">
+
+    <div class="window_top">瓜子二手车直卖网</div>
+
+    <div class="window_middle">
+        <form>
+            <div>
+                <p>手机号码</p><input class="input1" type="text" name="phone" placeholder="请输入你的手机号码">
+
+            </div>
+                 <div id="warning">请输入正确的手机号码</div>
+            <div>
+                <p>验证码</p><input class="input2" type="text" name="code" placeholder="输入你的验证码"><input class="input3" type="submit" value="获取验证码">
+            </div>
+        </form>
+    </div>
+
+    <button id="btn">登录</button>
+
+
+
+    <div class="window_bottom">免费咨询400-069-6530</div>
+    <div class="window_bottom_two">登录即视为同意
+        <a href="https://www.guazi.com/zq_term/">《用户使用协议》</a>及
+        <a href="https://www.guazi.com/zq_privacy/">《隐私权条款》</a>
+    </div>
+</div>
+
+</body>
+</html>

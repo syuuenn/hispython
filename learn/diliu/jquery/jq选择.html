@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            alert($('span').css('font-size'))
+
+        $('.box1').css({'width':'100px','height':'100px','background-color':'black'})
+        $('.box1').css('background-color','black')
+        $('#box2').addClass('newclass')//追加样式（增加类名）
+        $('ul li:first').html('lll')//第一个ul里的第一个li
+        $('ul li:first-child').html('lll')//所有ul里的第一个li
+        $('input[name="pw"]').html('lll')//属性选择器
+
+
+       })
+    </script>
+</head>
+<body>
+<div class="box1"></div>
+<div id="box2"></div>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<span>123</span>
+</body>
+</html>

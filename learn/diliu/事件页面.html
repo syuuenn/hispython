@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            var box = document.getElementById('box1');
+            var body = document.getElementById('body');
+            // box.onclick = function () {
+            //     alert('哼')   };
+            box.onmouseover = function () {
+                console.log('哈')
+            };
+            box.onclick = function () {
+                body.style.background='red'
+            }
+        }
+    </script>
+</head>
+<body id="body" style="background: #FF7F24">
+<div id="box1">测试</div>
+</body>
+</html>

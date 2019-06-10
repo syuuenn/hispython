@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            var name = document.getElementById('name');
+            var psw = document.getElementById('psw');
+            var cpsw = document.getElementById('cpsw');
+            var email = document.getElementById('email');
+            var com = document.getElementById('com');
+            var dict = {};
+            com.onclick = function () {
+                dict['name']=name.value;
+                dict['psw']=psw.value;
+                dict['cpsw']=cpsw.value;
+                dict['email']=email.value;
+                console.log(dict)
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    用户名：<input type="text" id="name"><br>
+    密码：<input type="password" id="psw"><br>
+    确认密码：<input type="password" id="cpsw"><br>
+    邮箱：<input type="email" id="email"><br>
+    <button id="com">提交</button><br>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+            function setCookie(user,expire) {
+                var timeobj = new Date();//时间对象
+                alert(timeobj);
+                var timenum = timeobj.getTime() + expire * 60 * 60 * 1000;
+                alert(timeobj.getTime());
+                timeobj.setTime(timenum);
+                alert(timeobj.setTime(timenum));
+                document.cookie = 'name=' + user + ';' + 'expires=' + timeobj.toGMTString()
+            }
+            setCookie('夯货',1);
+           alert(document.cookie)
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

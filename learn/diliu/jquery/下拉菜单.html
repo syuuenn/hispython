@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box1{
+                width: 600px;
+                height: 50px;
+                background: #E0FFFF;
+                margin: 300px auto;
+               text-align: center;
+               line-height: 50px;
+        }
+        .box1 ul li{
+                    float: left;
+                    width: 200px;
+        }
+
+        .box1 ul li ul{
+                        display: none;
+        }
+
+        a{
+            text-decoration: none;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //1
+            // $('.box1 ul li').mouseover(function () {
+            //     $(this).children('ul').show();
+            // })
+            //  $('.box1 ul li').mouseout(function () {
+            //     $(this).children('ul').hide();
+            // });
+            //2
+            //   $('.box1 ul li').hover(function () {
+            //     $(this).children('ul').show();
+            // },function () {
+            //     $(this).children('ul').hide();
+            // });
+              //3
+            //     $('.box1 ul li').hover(function () {
+            //     $(this).children('ul').toggle();
+            // });
+            //4
+                 $('.box1 ul li').hover(function () {
+                $(this).children('ul').stop().slideToggle();
+            });
+                 $('#a1').click(function () {
+                        console.log($(this).attr('href'));//获取href的值
+                        $(this).attr({href:'www,baidu.com'});//改变href的值
+                        console.log($(this).html());//获取文本和标签，可以设置内容
+                        console.log($(this).val());//获取表单字段的值，可以设置内容
+                        console.log($(this).text());//获取文本，可以设置内容
+                 })
+                  
+        })
+    </script>
+</head>
+<body>
+<div class="box1">
+<ul>
+    <li><a href="#" id="a1">地址</a>
+        <ul>
+            <li><a href="#">北京</a></li>
+            <li><a href="#">上海</a></li>
+            <li><a href="#">杭州</a></li>
+        </ul>
+    </li>
+    <li><a href="#">收藏</a>
+         <ul>
+            <li><a href="#">北京</a></li>
+            <li><a href="#">上海</a></li>
+            <li><a href="#">杭州</a></li>
+        </ul>
+    </li>
+    <li><a href="#">千牛卖家</a>
+         <ul>
+            <li><a href="#">北京</a></li>
+            <li><a href="#">上海</a></li>
+            <li><a href="#">杭州</a></li>
+        </ul>
+    </li>
+</ul>
+</div>
+</body>
+</html>
