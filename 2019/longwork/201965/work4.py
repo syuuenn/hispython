@@ -17,39 +17,43 @@
 
 
 
+
 # def f(param):
 #     list1=[]
 #     list2=[]
 #     for i in range(len(param)):
-#         list2.append(0)
+#         list2 += [0]
+#         print(list2)
 #     for j in range(len(param)):
-#         list1.append(list2)
-#     list3=str(list1)
-#     list4=[]
-#     print(list3)
-#     # for i in range(len(list3)):
-#     #     if list3[i]!='[' or list3[i]!=']':
-#     #         list4.append(int(list3[i]))
-#     #
-#     # for m in range(len(param)):
-#     #     for n in range(len(param)):
-#     #        list4[n][m]=param[m][n]
-#     #         # print(param[m][n])
-#     # print(list4)
-#     # print(list2)
+#         list1.append(list2[:])
+#
+#     print(list1)
+#     for m in range(len(param)):
+#         for n in range(len(param)):
+#            list1[n][m]=param[m][n]
+#             # print(param[m][n])
+#     print(list1)
 #
 #
 # f([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 
 
-class Solution:
-    def transpose(self, A):
-        result = []
-        for i in range(len(A[0])):
-            result.append([])
-            for j in range(len(A)):
-                result[i].append(A[j][i])
-        return result
+class A():
+    def t(self,B):
+        return [*zip(*B)]
 
-f=Solution()
-print(f.transpose([[1, 2, 3], [4, 5, 6]]))
+f = A().t
+print(f([[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
+
+
+# class Solution:
+#     def transpose(self, A):
+#         result = []
+#         for i in range(len(A[0])):
+#             result.append([])
+#             for j in range(len(A)):
+#                 result[i].append(A[j][i])
+#         return result
+#
+# f=Solution()
+# print(f.transpose([[1, 2, 3], [4, 5, 6]]))
